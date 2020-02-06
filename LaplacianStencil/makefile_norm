@@ -1,0 +1,50 @@
+CC = g++
+WARNING_FLAGS = -Wall -Wextra -g -O0
+EXE = lap
+EXE_OPENMP = lap_openmp
+
+all: clean 
+	$(CC) -o ./LaplacianStencil_0_0/$(EXE) ./LaplacianStencil_0_0/main.cpp ./LaplacianStencil_0_0/Laplacian.cpp
+	$(CC) -o ./LaplacianStencil_0_0/$(EXE_OPENMP) ./LaplacianStencil_0_0/main.cpp ./LaplacianStencil_0_0/Laplacian.cpp -fopenmp
+	$(CC) -o ./LaplacianStencil_0_1/$(EXE) ./LaplacianStencil_0_1/main.cpp ./LaplacianStencil_0_1/Laplacian.cpp
+	$(CC) -o ./LaplacianStencil_0_1/$(EXE_OPENMP) ./LaplacianStencil_0_1/main.cpp ./LaplacianStencil_0_1/Laplacian.cpp -fopenmp
+	$(CC) -o ./LaplacianStencil_0_2/$(EXE) ./LaplacianStencil_0_2/main.cpp ./LaplacianStencil_0_2/Laplacian.cpp
+	$(CC) -o ./LaplacianStencil_0_2/$(EXE_OPENMP) ./LaplacianStencil_0_2/main.cpp ./LaplacianStencil_0_2/Laplacian.cpp -fopenmp
+	$(CC) -o ./LaplacianStencil_0_3/$(EXE) ./LaplacianStencil_0_3/main.cpp ./LaplacianStencil_0_3/Laplacian.cpp
+	$(CC) -o ./LaplacianStencil_0_3/$(EXE_OPENMP) ./LaplacianStencil_0_3/main.cpp ./LaplacianStencil_0_3/Laplacian.cpp -fopenmp
+	$(CC) -o ./LaplacianStencil_0_4/$(EXE) ./LaplacianStencil_0_4/main.cpp ./LaplacianStencil_0_4/Laplacian.cpp
+	$(CC) -o ./LaplacianStencil_0_4/$(EXE_OPENMP) ./LaplacianStencil_0_4/main.cpp ./LaplacianStencil_0_4/Laplacian.cpp -fopenmp
+	$(CC) -o ./LaplacianStencil_0_5/$(EXE) ./LaplacianStencil_0_5/main.cpp ./LaplacianStencil_0_5/Laplacian.cpp
+	$(CC) -o ./LaplacianStencil_0_5/$(EXE_OPENMP) ./LaplacianStencil_0_5/main.cpp ./LaplacianStencil_0_5/Laplacian.cpp -fopenmp
+	$(CC) -o ./LaplacianStencil_0_6/$(EXE) ./LaplacianStencil_0_6/main.cpp ./LaplacianStencil_0_6/Laplacian.cpp
+	$(CC) -o ./LaplacianStencil_0_6/$(EXE_OPENMP) ./LaplacianStencil_0_6/main.cpp ./LaplacianStencil_0_6/Laplacian.cpp -fopenmp
+	$(CC) -o ./LaplacianStencil_0_7/$(EXE) ./LaplacianStencil_0_7/main.cpp ./LaplacianStencil_0_7/Laplacian.cpp
+	$(CC) -o ./LaplacianStencil_0_7/$(EXE_OPENMP) ./LaplacianStencil_0_7/main.cpp ./LaplacianStencil_0_7/Laplacian.cpp -fopenmp
+	
+clean: 
+	rm -f ./LaplacianStencil_0_0/*.o
+	rm -f ./LaplacianStencil_0_1/*.o
+	rm -f ./LaplacianStencil_0_2/*.o
+	rm -f ./LaplacianStencil_0_3/*.o
+	rm -f ./LaplacianStencil_0_4/*.o
+	rm -f ./LaplacianStencil_0_5/*.o
+	rm -f ./LaplacianStencil_0_6/*.o
+	rm -f ./LaplacianStencil_0_7/*.o
+
+remove:
+	rm -f ./LaplacianStencil_0_0/$(EXE) 
+	rm -f ./LaplacianStencil_0_1/*.o
+	rm -f ./LaplacianStencil_0_2/*.o
+	rm -f ./LaplacianStencil_0_3/*.o
+	rm -f ./LaplacianStencil_0_4/*.o
+	rm -f ./LaplacianStencil_0_5/*.o
+	rm -f ./LaplacianStencil_0_6/*.o
+	rm -f ./LaplacianStencil_0_7/*.o
+	rm -f ./LaplacianStencil_0_0/$(EXE_OPENMP) 
+	rm -f ./LaplacianStencil_0_1/*.o
+	rm -f ./LaplacianStencil_0_2/*.o
+	rm -f ./LaplacianStencil_0_3/*.o
+	rm -f ./LaplacianStencil_0_4/*.o
+	rm -f ./LaplacianStencil_0_5/*.o
+	rm -f ./LaplacianStencil_0_6/*.o
+	rm -f ./LaplacianStencil_0_7/*.o

@@ -1,0 +1,43 @@
+CC = g++
+WARNING_FLAGS = -Wall -Wextra -g -O0
+EXE = lap
+EXE_OPENMP = lap_openmp
+SUBDIR := $(wildcard LaplacianStencil_0_*)
+
+all: $(SUBDIR)
+	echo 1
+	#echo $(SUBDIR)
+	for dir in $(SUBDIR); do \
+		#echo 2; \
+		echo $$dir; \
+		$(CC) -o $$dir/$(EXE) $$dir/main.cpp $$dir/Laplacian.cpp ; \
+		$(CC) -o $$dir/$(EXE_OPENMP) $$dir/main.cpp $$dir/Laplacian.cpp -fopenmp ; \
+	done
+
+clean: 
+	rm -f ./LaplacianStencil_0_0/*.o
+	rm -f ./LaplacianStencil_0_1/*.o
+	rm -f ./LaplacianStencil_0_2/*.o
+	rm -f ./LaplacianStencil_0_3/*.o
+	rm -f ./LaplacianStencil_0_4/*.o
+	rm -f ./LaplacianStencil_0_5/*.o
+	rm -f ./LaplacianStencil_0_6/*.o
+	rm -f ./LaplacianStencil_0_7/*.o
+
+remove:
+	rm -f ./LaplacianStencil_0_0/$(EXE) 
+	rm -f ./LaplacianStencil_0_1/*.o
+	rm -f ./LaplacianStencil_0_2/*.o
+	rm -f ./LaplacianStencil_0_3/*.o
+	rm -f ./LaplacianStencil_0_4/*.o
+	rm -f ./LaplacianStencil_0_5/*.o
+	rm -f ./LaplacianStencil_0_6/*.o
+	rm -f ./LaplacianStencil_0_7/*.o
+	rm -f ./LaplacianStencil_0_0/$(EXE_OPENMP) 
+	rm -f ./LaplacianStencil_0_1/*.o
+	rm -f ./LaplacianStencil_0_2/*.o
+	rm -f ./LaplacianStencil_0_3/*.o
+	rm -f ./LaplacianStencil_0_4/*.o
+	rm -f ./LaplacianStencil_0_5/*.o
+	rm -f ./LaplacianStencil_0_6/*.o
+	rm -f ./LaplacianStencil_0_7/*.o
